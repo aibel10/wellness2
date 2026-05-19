@@ -51,7 +51,16 @@ export default function SuccessStoriesPage() {
   ];
 
   return (
-    <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-mist to-moss/10 text-ink">
+    <main className="min-h-screen relative overflow-hidden bg-[#FFFDF8] text-ink">
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/wellness-bg.png" 
+          alt="Success Stories Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
       <Header />
       
       {/* Decorative background blobs to enhance the glass effect */}

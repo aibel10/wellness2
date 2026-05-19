@@ -344,8 +344,17 @@ function SectionHeading({
 
 function Intro() {
   return (
-    <section className="section-pad">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section className="section-pad relative overflow-hidden bg-[#FFFDF8]">
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/nature-bg.png" 
+          alt="Intro Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
           <p className="mb-3 text-sm font-bold uppercase text-clay">A calmer path in</p>
           <h2 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
@@ -469,7 +478,18 @@ function About() {
 
 function Programs() {
   return (
-    <section id="programs" className="section-pad relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-mist to-moss/10">
+    <section id="programs" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/nature-bg.png" 
+          alt="Programs Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
+
       {/* Decorative background blobs to enhance the glass effect */}
       <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-marigold/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-moss/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
@@ -525,7 +545,18 @@ function Programs() {
 
 function Testimonials() {
   return (
-    <section id="results" className="section-pad relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-linen to-mist">
+    <section id="results" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/wellness-bg.png" 
+          alt="Client Results Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
+
       {/* Decorative background blobs to enhance the glass effect */}
       <div className="absolute top-0 right-1/4 w-[35rem] h-[35rem] bg-moss/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
       <div className="absolute bottom-0 left-1/4 w-[30rem] h-[30rem] bg-clay/5 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
@@ -576,8 +607,17 @@ function Testimonials() {
 
 function LeadMagnet() {
   return (
-    <section className="bg-moss px-4 py-16 text-white sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section className="relative px-4 py-16 text-white sm:px-6 lg:px-8 overflow-hidden bg-moss">
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/wellness-bg.png" 
+          alt="Lead Magnet Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-moss/80 backdrop-blur-[2px]" />
+      </div>
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
           <p className="mb-3 text-sm font-bold uppercase text-marigold">Free guide</p>
           <h2 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
@@ -624,7 +664,18 @@ function LeadMagnet() {
 
 function Resources() {
   return (
-    <section id="resources" className="section-pad relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-linen to-mist/30">
+    <section id="resources" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/nature-bg.png" 
+          alt="Resources Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
+
       {/* Decorative background blobs to enhance the glass effect */}
       <div className="absolute top-0 right-1/4 w-[35rem] h-[35rem] bg-moss/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
       <div className="absolute bottom-0 left-1/4 w-[30rem] h-[30rem] bg-clay/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
