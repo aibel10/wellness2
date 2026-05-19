@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        moss: "#FF6B00", // Vibrant orange accent
-        fern: "#FFAA00", // Bright gold accent
-        clay: "#FF5500", // Dark orange / rust accent
-        marigold: "#FFB700", // Yellow gold
-        ink: "#FFFFFF", // White for text in dark mode
-        mist: "#101D35", // Slate blue for cards
-        linen: "#0B1224", // Deep navy for sections
+        moss: "#2F6F57", // Forest green accent
+        fern: "#77A97A", // Soft green accent
+        clay: "#C86F5A", // Soft clay accent
+        marigold: "#E9B44C", // Yellow gold
+        ink: "#000000", // Pure black for headings/text
+        mist: "#F4F7F1", // Light green-gray for cards
+        linen: "#FFF8EF", // Light warm cream for sections
       },
       boxShadow: {
-        soft: "0 18px 55px rgba(5, 11, 20, 0.5)",
+        soft: "0 18px 55px rgba(23, 33, 29, 0.08)",
       },
       animation: {
         marquee: "marquee var(--duration) linear infinite",

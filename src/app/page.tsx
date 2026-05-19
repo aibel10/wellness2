@@ -173,7 +173,7 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#060B15] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-slate-800">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -197,9 +197,9 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 text-white shadow-soft">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 text-black shadow-soft">
       {/* Background blur layer - prevents establishing containing block on header */}
-      <div className="absolute inset-0 -z-10 bg-black/40 backdrop-blur-xl" />
+      <div className="absolute inset-0 -z-10 bg-white/80 backdrop-blur-xl" />
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a className="focus-ring flex items-center gap-2 rounded-md group" href="/" aria-label="Asuhar B home">
           <span className="relative flex h-9 w-9 items-center justify-center rounded-md bg-marigold text-black overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(255,107,0,0.6)]">
@@ -210,7 +210,7 @@ function Header() {
             <span className="text-base sm:text-lg font-bold tracking-tight transition-all duration-500 group-hover:text-marigold leading-none">
               ASUHAR B
             </span>
-            <span className="text-[9px] text-white/50 font-bold uppercase tracking-widest leading-none mt-0.5">
+            <span className="text-[9px] text-black/50 font-bold uppercase tracking-widest leading-none mt-0.5">
               Mission 444
             </span>
           </div>
@@ -218,7 +218,7 @@ function Header() {
         <nav aria-label="Main navigation" className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
             <a
-              className="focus-ring rounded-full px-4 py-2 text-sm font-medium text-white/90 transition-all duration-300 border border-transparent hover:text-white hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 hover:shadow-[0_4px_12px_rgba(255,255,255,0.05)] active:bg-white/30 active:backdrop-blur-2xl active:border-white/50 active:scale-90 active:shadow-[inset_0_4px_20px_rgba(255,255,255,0.6),0_8px_32px_rgba(255,255,255,0.2)]"
+              className="focus-ring rounded-full px-4 py-2 text-sm font-medium text-slate-800 transition-all duration-300 border border-transparent hover:text-black hover:bg-black/5 hover:backdrop-blur-md hover:border-black/10 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] active:bg-black/10 active:backdrop-blur-2xl active:border-black/20 active:scale-90 active:shadow-[inset_0_4px_20px_rgba(0,0,0,0.1),0_8px_32px_rgba(0,0,0,0.05)]"
               href={item.href}
               key={item.href}
             >
@@ -228,7 +228,7 @@ function Header() {
         </nav>
         <div className="flex items-center gap-2">
           <a
-            className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-white px-4 text-sm font-semibold text-black shadow-sm transition hover:bg-marigold hover:text-black"
+            className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-moss px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-black hover:text-white"
             href="#contact"
           >
             <CalendarCheck aria-hidden="true" size={18} />
@@ -243,25 +243,24 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="hero-image relative min-h-[85vh] pt-16 text-white flex items-center">
-      <div className="absolute inset-0 bg-[#060B15]/40 z-0" />
+    <section id="top" className="hero-image relative min-h-[85vh] pt-16 text-black flex items-center">
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-md border border-moss/30 bg-moss/10 px-3.5 py-2 text-sm font-bold uppercase text-moss backdrop-blur-sm shadow-[0_0_15px_rgba(255,107,0,0.15)]">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-md border border-moss/30 bg-moss/10 px-3.5 py-2 text-sm font-bold uppercase text-moss backdrop-blur-sm shadow-sm">
             <Sparkles aria-hidden="true" size={16} />
             MISSION 444 WELLNESS WORLD
           </p>
-          <h1 className="max-w-4xl text-balance text-5xl font-extrabold leading-none tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-balance text-5xl font-extrabold leading-none tracking-tight text-black sm:text-6xl lg:text-7xl">
             Eat Right.<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-moss to-marigold">Live Right.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-white/90 sm:text-xl font-medium">
+          <p className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-slate-700 sm:text-xl font-medium">
             Building Wellness. Creating Wealth. Changing Lives.<br/>
             Holistic lifestyle training under the guidance of International Trainer Asuhar B to help you build sustainable health.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
-              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-moss px-6 text-base font-bold text-white transition hover:bg-white hover:text-black"
+              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-moss px-6 text-base font-bold text-white transition hover:bg-black hover:text-white"
               href="https://wa.me/919809745714?text=Hi%20Asuhar%20B,%20I'm%20interested%20in%20joining%20the%20Mission%20444%20community."
               target="_blank"
               rel="noopener noreferrer"
@@ -270,30 +269,30 @@ function Hero() {
               <ArrowRight aria-hidden="true" size={19} />
             </a>
             <a
-              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-white/5 px-6 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-black"
+              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-black/20 bg-black/5 px-6 text-base font-semibold text-black backdrop-blur-sm transition hover:bg-black hover:text-white"
               href="#programs"
             >
               Our Programs
               <ChevronRight aria-hidden="true" size={19} />
             </a>
           </div>
-          <div className="mt-10 grid max-w-2xl grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white/80">
-            <div className="rounded-md border border-white/10 bg-mist/30 p-3.5 backdrop-blur-sm">
+          <div className="mt-10 grid max-w-2xl grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-slate-700">
+            <div className="rounded-md border border-black/10 bg-mist/60 p-3.5 backdrop-blur-sm">
               <strong className="block text-2xl text-moss font-bold">Eat Right</strong>
               Food Awareness Focus
             </div>
-            <div className="rounded-md border border-white/10 bg-mist/30 p-3.5 backdrop-blur-sm">
+            <div className="rounded-md border border-black/10 bg-mist/60 p-3.5 backdrop-blur-sm">
               <strong className="block text-2xl text-marigold font-bold">100%</strong>
               Community Supported
             </div>
-            <div className="rounded-md border border-white/10 bg-mist/30 p-3.5 backdrop-blur-sm">
-              <strong className="block text-2xl text-fern font-bold">Trivandrum</strong>
+            <div className="rounded-md border border-black/10 bg-mist/60 p-3.5 backdrop-blur-sm">
+              <strong className="block text-2xl text-moss font-bold">Trivandrum</strong>
               Mission 444 Center
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#060B15] to-transparent" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FFFDF8] to-transparent" aria-hidden="true" />
     </section>
   );
 }
@@ -301,13 +300,13 @@ function Hero() {
 function TrustStrip() {
   return (
     <section aria-label="Credentials and trust markers" className="relative z-10 -mt-10 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-6xl gap-3 rounded-2xl bg-mist/80 border border-white/10 p-4 shadow-soft md:grid-cols-4 backdrop-blur-xl">
+      <div className="mx-auto grid max-w-6xl gap-3 rounded-2xl bg-white/90 border border-black/10 p-4 shadow-soft md:grid-cols-4 backdrop-blur-xl">
         {trustItems.map(({ label, icon: Icon }) => (
-          <div className="flex min-h-20 items-center gap-3 rounded-xl bg-linen p-4 border border-white/5" key={label}>
+          <div className="flex min-h-20 items-center gap-3 rounded-xl bg-[#FFFDF8] p-4 border border-black/5" key={label}>
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-moss text-white">
               <Icon aria-hidden="true" size={19} />
             </span>
-            <span className="text-sm font-semibold text-white/90">{label}</span>
+            <span className="text-sm font-semibold text-slate-800">{label}</span>
           </div>
         ))}
       </div>
@@ -327,17 +326,17 @@ function SectionHeading({
   return (
     <div className="mx-auto mb-12 max-w-3xl text-center">
       <p className="mb-3 text-xs font-bold uppercase tracking-widest text-moss">{eyebrow}</p>
-      <h2 className="text-balance text-3xl font-bold leading-tight text-white sm:text-4xl">
+      <h2 className="text-balance text-3xl font-bold leading-tight text-black sm:text-4xl">
         {title}
       </h2>
-      <p className="mt-4 text-lg leading-relaxed text-white/70 font-medium">{text}</p>
+      <p className="mt-4 text-lg leading-relaxed text-slate-600 font-medium">{text}</p>
     </div>
   );
 }
 
 function Intro() {
   return (
-    <section className="section-pad relative overflow-hidden bg-[#060B15]">
+    <section className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       <div className="absolute inset-0 z-0">
         <Image 
           src="/nature-bg.png" 
@@ -345,12 +344,12 @@ function Intro() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
       <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-moss">OUR VISION</p>
-          <h2 className="text-balance text-3xl font-extrabold leading-tight text-white sm:text-4xl">
+          <h2 className="text-balance text-3xl font-extrabold leading-tight text-black sm:text-4xl">
             HEALTH IS NOT AN OPTION, ITS MANDATORY FOR NORMAL LIVING
           </h2>
         </div>
@@ -361,9 +360,9 @@ function Intro() {
             "You are ready for support that feels practical, not performative.",
             "You want your body, schedule, and values in the same conversation.",
           ].map((item) => (
-            <div className="flex gap-3 rounded-2xl border border-white/10 bg-mist/40 backdrop-blur-xl p-5" key={item}>
+            <div className="flex gap-3 rounded-2xl border border-black/10 bg-mist/60 backdrop-blur-xl p-5" key={item}>
               <CheckCircle2 className="mt-1 shrink-0 text-moss" aria-hidden="true" size={20} />
-              <p className="leading-relaxed text-white/80 text-sm font-medium">{item}</p>
+              <p className="leading-relaxed text-slate-700 text-sm font-semibold">{item}</p>
             </div>
           ))}
         </div>
@@ -382,7 +381,7 @@ function FeaturedEvent() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFF8EF]/92 backdrop-blur-[2px]" />
       </div>
       
       {/* Decorative glows */}
@@ -391,28 +390,28 @@ function FeaturedEvent() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-12">
-          <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-moss shadow-[0_0_15px_rgba(255,107,0,0.2)]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-moss shadow-sm">
             <CalendarCheck className="w-4 h-4" /> Featured Event
           </span>
-          <h2 className="mt-4 text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-4 text-balance text-4xl font-extrabold tracking-tight text-black sm:text-5xl">
             Eat Right Food Awareness
           </h2>
-          <p className="mt-2 text-lg text-fern font-bold uppercase tracking-widest">
+          <p className="mt-2 text-lg text-moss font-bold uppercase tracking-widest">
             BTC & New Visitors Recognition
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-12 items-stretch">
           {/* Details Column */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl border border-white/10 bg-mist/40 backdrop-blur-xl p-8 sm:p-10 shadow-2xl">
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl border border-black/10 bg-mist/60 backdrop-blur-xl p-8 sm:p-10 shadow-lg">
             <div>
-              <blockquote className="border-l-4 border-moss pl-4 text-xl font-medium italic text-white/90 mb-8">
+              <blockquote className="border-l-4 border-moss pl-4 text-xl font-medium italic text-slate-800 mb-8">
                 &quot;HEALTH IS NOT AN OPTION, ITS MANDATORY FOR NORMAL LIVING&quot;
               </blockquote>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-moss/20 text-moss border border-moss/30 shadow-[0_0_10px_rgba(255,107,0,0.15)]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-moss/20 text-moss border border-moss/30 shadow-sm">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                       <line x1="16" y1="2" x2="16" y2="6" />
@@ -421,40 +420,40 @@ function FeaturedEvent() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-white/40">Date & Day</h4>
-                    <p className="text-lg font-bold text-white mt-1">17 MAY 2026 (SUNDAY)</p>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500">Date & Day</h4>
+                    <p className="text-lg font-bold text-black mt-1">17 MAY 2026 (SUNDAY)</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-moss/20 text-moss border border-moss/30 shadow-[0_0_10px_rgba(255,107,0,0.15)]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-moss/20 text-moss border border-moss/30 shadow-sm">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="12 6 12 12 16 14" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-white/40">Timing</h4>
-                    <p className="text-lg font-bold text-white mt-1">8:00 AM - 9:00 AM <span className="text-moss font-bold">(IST)</span></p>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500">Timing</h4>
+                    <p className="text-lg font-bold text-black mt-1">8:00 AM - 9:00 AM <span className="text-moss font-bold">(IST)</span></p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-moss/20 text-moss border border-moss/30 shadow-[0_0_10px_rgba(255,107,0,0.15)]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-moss/20 text-moss border border-moss/30 shadow-sm">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-white/40">Location</h4>
-                    <p className="text-lg font-bold text-white mt-1">MISSION 444 WELLNESS WORLD</p>
-                    <p className="text-sm text-white/70">Mannarakonam, Vattiyoorkavu, Trivandrum, Kerala</p>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500">Location</h4>
+                    <p className="text-lg font-bold text-black mt-1">MISSION 444 WELLNESS WORLD</p>
+                    <p className="text-sm text-slate-600">Mannarakonam, Vattiyoorkavu, Trivandrum, Kerala</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-4 items-center justify-between">
+            <div className="mt-8 pt-6 border-t border-black/10 flex flex-wrap gap-4 items-center justify-between">
               <div>
-                <span className="text-xs font-bold text-white/40 uppercase tracking-widest block">Building Wellness</span>
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-widest block">Building Wellness</span>
                 <span className="text-sm font-bold text-moss">ASUHAR B Wellness Builder</span>
               </div>
               <div className="flex items-center gap-1 text-marigold">
@@ -466,24 +465,24 @@ function FeaturedEvent() {
           </div>
 
           {/* Slogan and Action Column */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-moss/20 bg-gradient-to-b from-mist/60 to-linen/80 backdrop-blur-xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-black/10 bg-gradient-to-b from-white to-mist backdrop-blur-xl p-8 sm:p-10 shadow-lg relative overflow-hidden">
             {/* Background Orange Accent curve */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-moss/10 rounded-full blur-2xl"></div>
             
             <div className="relative z-10">
               <h3 className="text-xs font-bold uppercase tracking-widest text-moss">Community Slogan</h3>
-              <p className="text-2xl font-extrabold text-white mt-2 leading-tight">
+              <p className="text-2xl font-extrabold text-black mt-2 leading-tight">
                 No More Excuses For Your Health & Wellness
               </p>
               
-              <div className="mt-6 p-5 rounded-2xl bg-[#060B15]/60 border border-white/5">
-                <p className="text-base font-semibold text-marigold leading-relaxed italic">
+              <div className="mt-6 p-5 rounded-2xl bg-white border border-black/5">
+                <p className="text-base font-semibold text-moss leading-relaxed italic">
                   &quot;You Can Have 1000 Problems In Life, Until You Have A Problem In Health&quot;
                 </p>
               </div>
 
               <div className="mt-6">
-                <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3">What You Will Gain:</h4>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">What You Will Gain:</h4>
                 <ul className="space-y-2">
                   {[
                     "Eat Right, Live Right",
@@ -492,7 +491,7 @@ function FeaturedEvent() {
                     "Strong Immunity Everyday",
                     "Energy Today, Success Tomorrow"
                   ].map((gain, i) => (
-                    <li key={i} className="flex items-center gap-2.5 text-sm text-white/80 font-semibold">
+                    <li key={i} className="flex items-center gap-2.5 text-sm text-slate-800 font-semibold">
                       <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-moss/20 text-moss text-xs font-bold border border-moss/30">✓</span>
                       {gain}
                     </li>
@@ -506,14 +505,14 @@ function FeaturedEvent() {
                 href="https://wa.me/919809745714?text=Hi%20Asuhar%20B,%20I'm%20interested%20in%20joining%20the%20Eat%20Right%20Food%20Awareness%20community."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-moss px-6 font-bold text-white shadow-lg shadow-moss/20 transition-all hover:bg-moss/80 hover:scale-[1.02] active:scale-95"
+                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-moss px-6 font-bold text-white shadow-md transition-all hover:bg-moss/80 hover:scale-[1.02] active:scale-95"
               >
                 <MessageCircle size={19} />
                 Join Our Community
               </a>
               <a
                 href="tel:+919809745714"
-                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 font-bold text-white transition-all hover:bg-white/10 hover:scale-[1.02] active:scale-95"
+                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 font-bold text-black transition-all hover:bg-black/10 hover:scale-[1.02] active:scale-95"
               >
                 <Phone size={18} />
                 Call +91 9809745714
@@ -559,7 +558,7 @@ function About() {
   ];
 
   return (
-    <section id="about" className="section-pad relative overflow-hidden bg-[#060B15]">
+    <section id="about" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -568,7 +567,7 @@ function About() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -582,7 +581,7 @@ function About() {
           {coaches.map((coach) => (
             <div 
               key={coach.name}
-              className="flex flex-col sm:flex-row gap-6 rounded-3xl border border-white/10 bg-mist/80 p-6 sm:p-8 shadow-2xl transition-all hover:shadow-3xl hover:border-moss/40 group backdrop-blur-md"
+              className="flex flex-col sm:flex-row gap-6 rounded-3xl border border-black/10 bg-mist/80 p-6 sm:p-8 shadow-lg transition-all hover:shadow-xl hover:border-moss/40 group backdrop-blur-md"
             >
               <div className="shrink-0 mx-auto sm:mx-0">
                 <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-linen shadow-inner group-hover:border-moss/40 transition-colors">
@@ -598,17 +597,17 @@ function About() {
                 <p className="text-xs font-bold uppercase tracking-widest text-moss mb-2">
                   {coach.role}
                 </p>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-black mb-3">
                   {coach.name}
                 </h3>
-                <p className="text-white/70 leading-relaxed mb-6 text-sm font-medium">
+                <p className="text-slate-700 leading-relaxed mb-6 text-sm font-semibold">
                   {coach.desc}
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                   {coach.tags.map((tag) => (
                     <span 
                       key={tag}
-                      className="inline-flex items-center rounded-full border border-white/5 bg-linen px-3 py-1 text-xs font-semibold text-white/80"
+                      className="inline-flex items-center rounded-full border border-black/5 bg-[#FFFDF8] px-3 py-1 text-xs font-bold text-slate-800"
                     >
                       {tag}
                     </span>
@@ -625,7 +624,7 @@ function About() {
 
 function Programs() {
   return (
-    <section id="programs" className="section-pad relative overflow-hidden bg-[#060B15]">
+    <section id="programs" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -634,7 +633,7 @@ function Programs() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -653,29 +652,29 @@ function Programs() {
             const Icon = program.icon;
             return (
               <article 
-                className="rounded-2xl border border-white/10 bg-mist/60 backdrop-blur-xl p-8 shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-mist/80 hover:border-moss/30" 
+                className="rounded-2xl border border-black/10 bg-mist/60 backdrop-blur-xl p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:bg-mist/80 hover:border-moss/30" 
                 key={program.title}
               >
-                <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-moss to-marigold text-white shadow-md">
+                <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-moss to-marigold text-white shadow-sm">
                   <Icon aria-hidden="true" size={26} />
                 </span>
-                <h3 className="text-2xl font-bold text-white">{program.title}</h3>
-                <p className="mt-3 leading-relaxed text-white/80 font-medium">{program.audience}</p>
+                <h3 className="text-2xl font-bold text-black">{program.title}</h3>
+                <p className="mt-3 leading-relaxed text-slate-800 font-semibold">{program.audience}</p>
                 
-                <div className="mt-6 h-[1px] w-full bg-gradient-to-r from-white/10 via-white/10 to-transparent"></div>
+                <div className="mt-6 h-[1px] w-full bg-gradient-to-r from-black/10 via-black/10 to-transparent"></div>
                 
                 <dl className="mt-6 space-y-5">
                   <div>
                     <dt className="text-xs font-bold uppercase tracking-wider text-moss">Includes</dt>
-                    <dd className="mt-1 leading-relaxed text-white/70 text-sm font-medium">{program.includes}</dd>
+                    <dd className="mt-1 leading-relaxed text-slate-700 text-sm font-semibold">{program.includes}</dd>
                   </div>
                   <div>
                     <dt className="text-xs font-bold uppercase tracking-wider text-moss">Expected outcome</dt>
-                    <dd className="mt-1 leading-relaxed text-white/70 text-sm font-medium">{program.outcome}</dd>
+                    <dd className="mt-1 leading-relaxed text-slate-700 text-sm font-semibold">{program.outcome}</dd>
                   </div>
                 </dl>
                 <a
-                  className="focus-ring mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-4 text-sm font-bold text-white shadow-sm transition-all hover:bg-moss hover:border-moss hover:text-white"
+                  className="focus-ring mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-black/5 border border-black/10 px-4 text-sm font-bold text-black shadow-sm transition-all hover:bg-moss hover:border-moss hover:text-white"
                   href="#contact"
                 >
                   Book a Consultation
@@ -692,7 +691,7 @@ function Programs() {
 
 function Testimonials() {
   return (
-    <section id="results" className="section-pad relative overflow-hidden bg-[#060B15]">
+    <section id="results" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -701,7 +700,7 @@ function Testimonials() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -720,11 +719,11 @@ function Testimonials() {
             {/* Using standard animate-marquee with custom variables */}
             <div className="flex w-max min-w-full shrink-0 animate-marquee [--duration:40s] flex-nowrap items-stretch gap-5 group-hover:[animation-play-state:paused]">
               {testimonials.map((testimonial) => (
-                <figure className="w-[290px] sm:w-[350px] shrink-0 rounded-2xl border border-white/10 bg-mist/80 backdrop-blur-xl p-6 shadow-2xl flex flex-col transition-all hover:bg-mist/90 hover:-translate-y-1" key={testimonial.name}>
+                <figure className="w-[290px] sm:w-[350px] shrink-0 rounded-2xl border border-black/10 bg-mist/80 backdrop-blur-xl p-6 shadow-md flex flex-col transition-all hover:bg-mist/90 hover:-translate-y-1" key={testimonial.name}>
                   <Quote className="mb-5 text-moss" aria-hidden="true" size={30} />
-                  <blockquote className="text-base leading-relaxed text-white/80 flex-1 font-medium">“{testimonial.quote}”</blockquote>
-                  <figcaption className="mt-6 border-t border-white/10 pt-5">
-                    <strong className="block text-lg text-white font-bold">{testimonial.name}</strong>
+                  <blockquote className="text-base leading-relaxed text-slate-800 flex-1 font-semibold">“{testimonial.quote}”</blockquote>
+                  <figcaption className="mt-6 border-t border-black/10 pt-5">
+                    <strong className="block text-lg text-black font-bold">{testimonial.name}</strong>
                     <span className="text-xs font-bold text-moss uppercase tracking-wider">{testimonial.detail}</span>
                   </figcaption>
                 </figure>
@@ -732,11 +731,11 @@ function Testimonials() {
             </div>
             <div className="flex w-max min-w-full shrink-0 animate-marquee [--duration:40s] flex-nowrap items-stretch gap-5 group-hover:[animation-play-state:paused]" aria-hidden="true">
               {testimonials.map((testimonial) => (
-                <figure className="w-[290px] sm:w-[350px] shrink-0 rounded-2xl border border-white/10 bg-mist/80 backdrop-blur-xl p-6 shadow-2xl flex flex-col transition-all hover:bg-mist/90 hover:-translate-y-1" key={`copy-${testimonial.name}`}>
+                <figure className="w-[290px] sm:w-[350px] shrink-0 rounded-2xl border border-black/10 bg-mist/80 backdrop-blur-xl p-6 shadow-md flex flex-col transition-all hover:bg-mist/90 hover:-translate-y-1" key={`copy-${testimonial.name}`}>
                   <Quote className="mb-5 text-moss" aria-hidden="true" size={30} />
-                  <blockquote className="text-base leading-relaxed text-white/80 flex-1 font-medium">“{testimonial.quote}”</blockquote>
-                  <figcaption className="mt-6 border-t border-white/10 pt-5">
-                    <strong className="block text-lg text-white font-bold">{testimonial.name}</strong>
+                  <blockquote className="text-base leading-relaxed text-slate-800 flex-1 font-semibold">“{testimonial.quote}”</blockquote>
+                  <figcaption className="mt-6 border-t border-black/10 pt-5">
+                    <strong className="block text-lg text-black font-bold">{testimonial.name}</strong>
                     <span className="text-xs font-bold text-moss uppercase tracking-wider">{testimonial.detail}</span>
                   </figcaption>
                 </figure>
@@ -744,8 +743,8 @@ function Testimonials() {
             </div>
           </div>
           {/* Fades on the edges to smooth the marquee entry/exit */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-[#060B15] to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-[#060B15] to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-[#FFFDF8] to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-[#FFFDF8] to-transparent z-10" />
         </div>
       </div>
     </section>
@@ -754,7 +753,7 @@ function Testimonials() {
 
 function LeadMagnet() {
   return (
-    <section className="relative px-4 py-16 text-white sm:px-6 lg:px-8 overflow-hidden bg-moss">
+    <section className="relative px-4 py-16 text-black sm:px-6 lg:px-8 overflow-hidden bg-linen">
       <div className="absolute inset-0 z-0">
         <Image 
           src="/wellness-bg.png" 
@@ -762,24 +761,24 @@ function LeadMagnet() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-moss/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFF8EF]/92 backdrop-blur-[2px]" />
       </div>
       <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-marigold">Free community access</p>
-          <h2 className="text-balance text-3xl font-extrabold leading-tight sm:text-4xl">
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-moss">Free community access</p>
+          <h2 className="text-balance text-3xl font-extrabold leading-tight text-black sm:text-4xl">
             Get Our Lifestyle Reset Guide & Recipes
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/90 font-medium">
+          <p className="mt-4 text-base leading-relaxed text-slate-700 font-medium">
             Learn the foundational habits of Eat Right Food Awareness to reset your body rhythm and immunity. Enter your details to receive the free handbook.
           </p>
         </div>
-        <form className="grid gap-3 rounded-2xl bg-[#060B15]/80 border border-white/10 p-5 shadow-2xl sm:grid-cols-[1fr_1fr_auto]" action="#contact">
+        <form className="grid gap-3 rounded-2xl bg-white border border-black/10 p-5 shadow-md sm:grid-cols-[1fr_1fr_auto]" action="#contact">
           <label className="sr-only" htmlFor="first-name">
             First name
           </label>
           <input
-            className="focus-ring min-h-12 rounded-xl border border-white/10 bg-[#060B15] px-4 text-white text-sm font-semibold placeholder:text-white/40"
+            className="focus-ring min-h-12 rounded-xl border border-black/10 bg-[#FFFDF8] px-4 text-black text-sm font-semibold placeholder:text-slate-400"
             id="first-name"
             name="first-name"
             placeholder="First name"
@@ -790,7 +789,7 @@ function LeadMagnet() {
             Email address
           </label>
           <input
-            className="focus-ring min-h-12 rounded-xl border border-white/10 bg-[#060B15] px-4 text-white text-sm font-semibold placeholder:text-white/40"
+            className="focus-ring min-h-12 rounded-xl border border-black/10 bg-[#FFFDF8] px-4 text-black text-sm font-semibold placeholder:text-slate-400"
             id="email"
             name="email"
             placeholder="Email address"
@@ -798,7 +797,7 @@ function LeadMagnet() {
             required
           />
           <button
-            className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-moss px-5 font-bold text-white transition hover:bg-white hover:text-black"
+            className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-moss px-5 font-bold text-white transition hover:bg-black hover:text-white"
             type="submit"
           >
             Get Guide
@@ -812,7 +811,7 @@ function LeadMagnet() {
 
 function Resources() {
   return (
-    <section id="resources" className="section-pad relative overflow-hidden bg-[#060B15]">
+    <section id="resources" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -821,7 +820,7 @@ function Resources() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -838,19 +837,19 @@ function Resources() {
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3 px-4 sm:px-6 lg:px-8">
           {resources.map((resource) => (
             <article 
-              className="rounded-2xl border border-white/10 bg-mist/60 backdrop-blur-xl p-8 shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-mist/80 hover:border-moss/30 flex flex-col h-full" 
+              className="rounded-2xl border border-black/10 bg-mist/60 backdrop-blur-xl p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:bg-mist/80 hover:border-moss/30 flex flex-col h-full" 
               key={resource.title}
             >
               <div className="mb-6 flex items-center justify-between gap-4">
-                <span className="rounded-xl border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-moss shadow-sm">{resource.tag}</span>
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-moss border border-white/10">
+                <span className="rounded-xl border border-black/10 bg-black/5 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-moss shadow-sm">{resource.tag}</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-black/5 text-moss border border-black/10">
                   <Search aria-hidden="true" size={18} />
                 </span>
               </div>
-              <h3 className="text-balance text-2xl font-bold text-white mb-4">{resource.title}</h3>
-              <p className="leading-relaxed text-white/70 font-medium flex-1 text-sm">{resource.excerpt}</p>
+              <h3 className="text-balance text-2xl font-bold text-black mb-4">{resource.title}</h3>
+              <p className="leading-relaxed text-slate-700 font-medium flex-1 text-sm">{resource.excerpt}</p>
               
-              <div className="mt-6 pt-6 border-t border-white/10">
+              <div className="mt-6 pt-6 border-t border-black/10">
                 <a
                   className="focus-ring inline-flex items-center gap-2 font-bold text-moss group transition-colors hover:text-marigold"
                   href="#contact"
@@ -869,7 +868,7 @@ function Resources() {
 
 function FAQ() {
   return (
-    <section id="faq" className="section-pad relative overflow-hidden bg-[#060B15]">
+    <section id="faq" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -878,7 +877,7 @@ function FAQ() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#060B15]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -893,10 +892,10 @@ function FAQ() {
         />
         <div className="space-y-5">
           {faqs.map((faq) => (
-            <details className="group rounded-2xl border border-white/10 bg-mist/60 backdrop-blur-xl p-6 shadow-2xl transition-all duration-300 hover:bg-mist/80" key={faq.question}>
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-bold text-white select-none">
+            <details className="group rounded-2xl border border-black/10 bg-mist/60 backdrop-blur-xl p-6 shadow-md transition-all duration-300 hover:bg-mist/80" key={faq.question}>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-bold text-black select-none">
                 {faq.question}
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/10 shadow-sm transition-transform duration-300 group-open:rotate-90">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black/5 border border-black/10 shadow-sm transition-transform duration-300 group-open:rotate-90">
                   <ChevronRight
                     className="shrink-0 text-moss"
                     aria-hidden="true"
@@ -904,8 +903,8 @@ function FAQ() {
                   />
                 </span>
               </summary>
-              <div className="mt-4 pt-4 border-t border-white/10">
-                <p className="leading-relaxed text-white/80 text-base font-medium">{faq.answer}</p>
+              <div className="mt-4 pt-4 border-t border-black/10">
+                <p className="leading-relaxed text-slate-700 text-base font-semibold">{faq.answer}</p>
               </div>
             </details>
           ))}
@@ -917,7 +916,7 @@ function FAQ() {
 
 function Contact() {
   return (
-    <section id="contact" className="section-pad relative overflow-hidden text-white bg-[#060B15]">
+    <section id="contact" className="section-pad relative overflow-hidden text-slate-800 bg-[#FFFDF8]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -927,28 +926,28 @@ function Contact() {
           className="object-cover"
         />
         {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-[#060B15]/90" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/90" />
       </div>
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start relative z-10 px-4 sm:px-6 lg:px-8">
         <div>
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-marigold">BOOKING AND CONTACT</p>
-          <h2 className="text-balance text-4xl font-extrabold leading-tight text-white">
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-moss">BOOKING AND CONTACT</p>
+          <h2 className="text-balance text-4xl font-extrabold leading-tight text-black">
             Ready to live healthier and stress-free?
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/80 font-medium">
+          <p className="mt-5 text-base leading-relaxed text-slate-700 font-medium">
             Contact trainer Asuhar B directly via WhatsApp, phone, or send an email inquiry. Get started on the path to food awareness, weight transformation, and normal living today.
           </p>
           <div className="mt-8 space-y-4">
             <a
-              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md px-5 font-bold text-white transition hover:bg-moss hover:border-moss"
+              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-xl bg-black/5 border border-black/10 backdrop-blur-md px-5 font-bold text-black transition hover:bg-moss hover:text-white hover:border-moss"
               href="mailto:asuharmission444@gmail.com"
             >
               asuharmission444@gmail.com
               <Mail aria-hidden="true" size={20} />
             </a>
             <a
-              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-xl border border-white/10 px-5 font-bold text-white transition hover:bg-white hover:text-black"
+              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-xl border border-black/10 px-5 font-bold text-black transition hover:bg-black hover:text-white"
               href="https://wa.me/919809745714"
               target="_blank"
               rel="noopener noreferrer"
@@ -959,18 +958,18 @@ function Contact() {
           </div>
         </div>
         <form 
-          className="rounded-2xl bg-mist border border-white/10 p-6 sm:p-8 shadow-2xl text-white" 
+          className="rounded-2xl bg-mist border border-black/10 p-6 sm:p-8 shadow-md text-slate-800" 
           action="mailto:asuharmission444@gmail.com" 
           method="post" 
           encType="text/plain"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-white/60" htmlFor="contact-name">
+              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500" htmlFor="contact-name">
                 Name
               </label>
               <input
-                className="focus-ring min-h-12 w-full rounded-xl border border-white/10 bg-[#060B15] px-4 text-white text-sm font-semibold placeholder:text-white/30"
+                className="focus-ring min-h-12 w-full rounded-xl border border-black/10 bg-[#FFFDF8] px-4 text-black text-sm font-semibold placeholder:text-slate-400"
                 id="contact-name"
                 name="name"
                 type="text"
@@ -978,11 +977,11 @@ function Contact() {
               />
             </div>
             <div>
-              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-white/60" htmlFor="contact-email">
+              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500" htmlFor="contact-email">
                 Email
               </label>
               <input
-                className="focus-ring min-h-12 w-full rounded-xl border border-white/10 bg-[#060B15] px-4 text-white text-sm font-semibold placeholder:text-white/30"
+                className="focus-ring min-h-12 w-full rounded-xl border border-black/10 bg-[#FFFDF8] px-4 text-black text-sm font-semibold placeholder:text-slate-400"
                 id="contact-email"
                 name="email"
                 type="email"
@@ -991,10 +990,10 @@ function Contact() {
             </div>
           </div>
           <div className="mt-4">
-            <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-white/60" htmlFor="interest">
+            <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500" htmlFor="interest">
               What program are you interested in?
             </label>
-            <select className="focus-ring min-h-12 w-full rounded-xl border border-white/10 bg-[#060B15] px-4 text-white text-sm font-semibold appearance-none" id="interest" name="interest">
+            <select className="focus-ring min-h-12 w-full rounded-xl border border-black/10 bg-[#FFFDF8] px-4 text-black text-sm font-semibold appearance-none" id="interest" name="interest">
               <option>Eat Right Food Awareness</option>
               <option>Lifestyle and Energy Reset</option>
               <option>Mission 444 Community</option>
@@ -1002,17 +1001,17 @@ function Contact() {
             </select>
           </div>
           <div className="mt-4">
-            <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-white/60" htmlFor="message">
+            <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500" htmlFor="message">
               Message
             </label>
             <textarea
-              className="focus-ring min-h-32 w-full rounded-xl border border-white/10 bg-[#060B15] px-4 py-3 text-white text-sm font-semibold placeholder:text-white/30"
+              className="focus-ring min-h-32 w-full rounded-xl border border-black/10 bg-[#FFFDF8] px-4 py-3 text-black text-sm font-semibold placeholder:text-slate-400"
               id="message"
               required
             />
           </div>
           <button
-            className="focus-ring mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-moss px-6 font-bold text-white shadow-lg shadow-moss/20 transition hover:bg-white hover:text-black active:scale-95"
+            className="focus-ring mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-moss px-6 font-bold text-white shadow-md transition hover:bg-black hover:text-white active:scale-95"
             type="submit"
           >
             Send Inquiry
@@ -1026,7 +1025,7 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="bg-[#060B15] pt-16 pb-8 border-t border-white/10 text-white/90">
+    <footer className="bg-linen pt-16 pb-8 border-t border-black/10 text-slate-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           
@@ -1034,19 +1033,19 @@ function Footer() {
           <div className="space-y-6">
             <a href="/" className="inline-block">
               <h2 className="text-2xl font-bold tracking-tight">
-                <span className="text-white">ASUHAR B</span>
+                <span className="text-black">ASUHAR B</span>
                 <span className="text-xs text-moss font-bold block uppercase tracking-widest mt-1">Mission 444 Wellness World</span>
               </h2>
             </a>
-            <blockquote className="border-l-2 border-moss pl-4 text-white/70 italic leading-relaxed text-sm">
+            <blockquote className="border-l-2 border-moss pl-4 text-slate-600 italic leading-relaxed text-sm">
               &quot;HEALTH IS NOT AN OPTION, ITS MANDATORY FOR NORMAL LIVING.&quot;
             </blockquote>
           </div>
 
           {/* Column 2: Explore */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-white/50 mb-6">Explore</h3>
-            <ul className="space-y-4 text-white/70 text-sm font-semibold">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Explore</h3>
+            <ul className="space-y-4 text-slate-700 text-sm font-semibold">
               <li><a href="/#about" className="hover:text-moss transition-colors">About Me</a></li>
               <li><a href="/#programs" className="hover:text-moss transition-colors">Services</a></li>
               <li><a href="/#resources" className="hover:text-moss transition-colors">Blog</a></li>
@@ -1056,8 +1055,8 @@ function Footer() {
 
           {/* Column 3: Contact */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-white/50 mb-6">Contact Details</h3>
-            <ul className="space-y-4 text-white/70 text-sm font-semibold">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Contact Details</h3>
+            <ul className="space-y-4 text-slate-700 text-sm font-semibold">
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 shrink-0 text-moss" />
                 <a href="mailto:asuharmission444@gmail.com" className="hover:text-moss transition-colors">asuharmission444@gmail.com</a>
@@ -1075,12 +1074,12 @@ function Footer() {
 
           {/* Column 4: Slogan & Socials */}
           <div className="space-y-6">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-white/50">Mission 444</h3>
-            <p className="text-white/70 text-sm font-medium leading-relaxed">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">Mission 444</h3>
+            <p className="text-slate-700 text-sm font-medium leading-relaxed">
               Building Wellness. Creating Wealth. Changing Lives. No more excuses for your health & wellness.
             </p>
             <div className="flex gap-4">
-              <a href="https://wa.me/919809745714" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-moss hover:text-white transition-colors" aria-label="WhatsApp">
+              <a href="https://wa.me/919809745714" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-black/5 border border-black/10 flex items-center justify-center text-slate-700 hover:bg-moss hover:text-white transition-colors" aria-label="WhatsApp">
                 <MessageCircle className="w-4 h-4" />
               </a>
             </div>
@@ -1088,7 +1087,7 @@ function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-white/10 text-center text-xs text-white/40 font-bold tracking-wider">
+        <div className="pt-8 border-t border-black/10 text-center text-xs text-slate-500 font-bold tracking-wider">
           © {new Date().getFullYear()} MISSION 444 WELLNESS WORLD. All rights reserved.
         </div>
       </div>
