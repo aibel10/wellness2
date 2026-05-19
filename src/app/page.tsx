@@ -21,6 +21,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { MobileNav } from "./MobileNav";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { label: "About", href: "/#about" },
@@ -227,6 +228,7 @@ function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-moss px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-black hover:text-white"
             href="#contact"
@@ -344,7 +346,7 @@ function Intro() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
       <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
@@ -381,7 +383,7 @@ function FeaturedEvent() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFF8EF]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFF8EF]/92 dark:bg-[#0B1224]/92 backdrop-blur-[2px]" />
       </div>
       
       {/* Decorative glows */}
@@ -567,7 +569,7 @@ function About() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -633,7 +635,7 @@ function Programs() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -700,7 +702,7 @@ function Testimonials() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -761,7 +763,7 @@ function LeadMagnet() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFF8EF]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFF8EF]/92 dark:bg-[#0B1224]/92 backdrop-blur-[2px]" />
       </div>
       <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
@@ -820,7 +822,7 @@ function Resources() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -877,7 +879,7 @@ function FAQ() {
           fill 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
 
       {/* Decorative background blobs to enhance the glass effect */}
@@ -926,7 +928,7 @@ function Contact() {
           className="object-cover"
         />
         {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-[#FFFDF8]/90" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/90 dark:bg-[#060B15]/90" />
       </div>
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start relative z-10 px-4 sm:px-6 lg:px-8">

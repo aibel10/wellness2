@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,13 +10,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        moss: "#2F6F57", // Forest green accent
-        fern: "#77A97A", // Soft green accent
-        clay: "#C86F5A", // Soft clay accent
-        marigold: "#E9B44C", // Yellow gold
-        ink: "#000000", // Pure black for headings/text
-        mist: "#F4F7F1", // Light green-gray for cards
-        linen: "#FFF8EF", // Light warm cream for sections
+        moss: "var(--color-moss)",
+        fern: "var(--color-fern)",
+        clay: "var(--color-clay)",
+        marigold: "var(--color-marigold)",
+        ink: "var(--color-ink)",
+        mist: "var(--color-mist)",
+        linen: "var(--color-linen)",
       },
       boxShadow: {
         soft: "0 18px 55px rgba(23, 33, 29, 0.08)",

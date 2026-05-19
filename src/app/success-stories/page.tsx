@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Leaf, CalendarCheck, Menu, Star, Quote, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { MobileNav } from "../MobileNav";
+import { ThemeToggle } from "../ThemeToggle";
 
 const navItems = [
   { label: "About", href: "/#about" },
@@ -59,7 +60,7 @@ export default function SuccessStoriesPage() {
           fill 
           className="object-cover blur-[8px] scale-105"
         />
-        <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#FFFDF8]/92 dark:bg-[#060B15]/92 backdrop-blur-[2px]" />
       </div>
       <Header />
       
@@ -171,6 +172,7 @@ function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-moss px-4 text-sm font-bold text-white shadow-md transition hover:bg-black hover:text-white"
             href="https://wa.me/919809745714"

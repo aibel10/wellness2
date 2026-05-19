@@ -6,6 +6,28 @@
   color-scheme: light;
   --page: #FFFDF8;
   --ink: #17211D;
+  
+  --color-moss: #2F6F57;
+  --color-fern: #77A97A;
+  --color-clay: #C86F5A;
+  --color-marigold: #E9B44C;
+  --color-ink: #000000;
+  --color-mist: #F4F7F1;
+  --color-linen: #FFF8EF;
+}
+
+.dark {
+  color-scheme: dark;
+  --page: #060B15;
+  --ink: #F8FAFC;
+  
+  --color-moss: #3EA67A;
+  --color-fern: #539E6D;
+  --color-clay: #E2846D;
+  --color-marigold: #F5B041;
+  --color-ink: #FFFFFF;
+  --color-mist: #101D35;
+  --color-linen: #0B1224;
 }
 
 * {
@@ -79,6 +101,12 @@ img {
   background-size: cover;
 }
 
+.dark .hero-image {
+  background-image:
+    linear-gradient(90deg, rgba(6, 11, 21, 0.95), rgba(6, 11, 21, 0.8), rgba(6, 11, 21, 0.5)),
+    url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1800&q=82");
+}
+
 .section-pad {
   padding: 2.5rem 1.25rem;
 }
@@ -103,4 +131,113 @@ img {
   box-shadow: inset 0 4px 20px rgba(255, 255, 255, 0.7), inset 0 -4px 15px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.2) !important;
   opacity: 0.85 !important;
   backdrop-filter: blur(12px) !important;
+}
+
+/* Dark mode utility class overrides */
+.dark .text-black {
+  color: #FFFFFF !important;
+}
+
+.dark .text-slate-800 {
+  color: #E2E8F0 !important;
+}
+
+.dark .text-slate-700 {
+  color: #CBD5E1 !important;
+}
+
+.dark .text-slate-600 {
+  color: #94A3B8 !important;
+}
+
+.dark .text-slate-500 {
+  color: #64748B !important;
+}
+
+.dark .text-slate-400 {
+  color: #475569 !important;
+}
+
+.dark .bg-white {
+  background-color: #101D35 !important;
+}
+
+.dark .bg-white\/80 {
+  background-color: rgba(6, 11, 21, 0.8) !important;
+}
+
+.dark .bg-white\/90 {
+  background-color: rgba(6, 11, 21, 0.9) !important;
+}
+
+.dark .bg-\[\#FFFDF8\] {
+  background-color: #060B15 !important;
+}
+
+.dark .bg-\[\#FFF8EF\] {
+  background-color: #0B1224 !important;
+}
+
+.dark .bg-gradient-to-b.from-white.to-mist {
+  background-image: linear-gradient(to bottom, #101D35, #0B1224) !important;
+}
+
+.dark .border-black\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .border-black\/5 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .border-black\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark .border-t-black\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .bg-black\/5 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .bg-black\/10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .hover\:bg-black\/10:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .hover\:bg-black:hover {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.dark .hover\:text-white:hover {
+  color: #000000 !important;
+}
+
+.dark .hover\:bg-white:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.dark .hover\:text-black:hover {
+  color: #FFFFFF !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  color: #FFFFFF !important;
+}
+
+.dark .shadow-soft {
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark ::placeholder {
+  color: #64748B !important;
 }
