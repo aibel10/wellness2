@@ -52,6 +52,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { SmoothScrollProvider } from "./SmoothScrollProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,7 +62,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
         <a 
           href="https://wa.me/1234567890" 
           target="_blank" 
