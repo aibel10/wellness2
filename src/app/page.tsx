@@ -62,13 +62,6 @@ const programCards = [
   },
 ];
 
-const signatureModules = [
-  "Body rhythm audit and baseline goals",
-  "Nourishment plan built around real schedules",
-  "Stress, sleep, and energy repair routines",
-  "Maintenance strategy for busy seasons",
-];
-
 const testimonials = [
   {
     quote:
@@ -208,7 +201,6 @@ export default function Home() {
       <Intro />
       <About />
       <Programs />
-      <SignatureProgram />
       <Testimonials />
       <LeadMagnet />
       <Resources />
@@ -411,8 +403,19 @@ function About() {
   ];
 
   return (
-    <section id="about" className="section-pad bg-[#FFFDF8]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="about" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/coaches-bg.png" 
+          alt="Wellness Coaches Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
+      
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="EXPERT GUIDANCE"
           title="Meet Our Wellness Coaches"
@@ -515,72 +518,6 @@ function Programs() {
             );
           })}
         </div>
-      </div>
-    </section>
-  );
-}
-
-function SignatureProgram() {
-  return (
-    <section className="section-pad bg-ink text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-start">
-        <div>
-          <p className="mb-3 text-sm font-bold uppercase text-marigold">Signature program</p>
-          <h2 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
-            The 12-week LumaWell Method for steadier energy and self-trust.
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-white/75">
-            This dedicated sales-page section gives the full picture: the problem,
-            the structure, the outcomes, social proof, pricing, and next steps.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {signatureModules.map((module) => (
-              <div className="flex gap-3 rounded-md border border-white/12 bg-white/7 p-4" key={module}>
-                <CheckCircle2 className="mt-1 shrink-0 text-marigold" aria-hidden="true" size={19} />
-                <span className="leading-7 text-white/82">{module}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
-              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-marigold px-6 text-base font-bold text-ink transition hover:bg-white"
-              href="#contact"
-            >
-              Apply for the Program
-              <ArrowRight aria-hidden="true" size={19} />
-            </a>
-            <a
-              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/25 px-6 text-base font-semibold text-white transition hover:bg-white hover:text-ink"
-              href="#faq"
-            >
-              Read FAQs
-              <BookOpen aria-hidden="true" size={19} />
-            </a>
-          </div>
-        </div>
-        <aside className="rounded-md bg-white p-6 text-ink shadow-soft">
-          <p className="text-sm font-bold uppercase text-clay">Program details</p>
-          <h3 className="mt-3 text-2xl font-semibold">Private coaching package</h3>
-          <div className="mt-6 space-y-4">
-            {[
-              "Six 60-minute private coaching sessions",
-              "Personal habit map and weekly action steps",
-              "Client portal with worksheets and replay notes",
-              "Voice-note support between sessions",
-              "Bonus grocery guide and energy reset plan",
-            ].map((item) => (
-              <div className="flex gap-3" key={item}>
-                <CheckCircle2 className="mt-1 shrink-0 text-moss" aria-hidden="true" size={18} />
-                <span className="leading-7 text-ink/76">{item}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 rounded-md bg-linen p-5">
-            <p className="text-sm font-bold uppercase text-clay">Investment</p>
-            <p className="mt-2 text-4xl font-semibold">$1,200</p>
-            <p className="mt-2 leading-7 text-ink/68">Payment plans available after the clarity call.</p>
-          </div>
-        </aside>
       </div>
     </section>
   );
@@ -733,7 +670,18 @@ function Resources() {
 
 function FAQ() {
   return (
-    <section id="faq" className="section-pad relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-mist/50 to-moss/10">
+    <section id="faq" className="section-pad relative overflow-hidden bg-[#FFFDF8]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/faq-bg.png" 
+          alt="FAQ Background" 
+          fill 
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#FFFDF8]/85 backdrop-blur-[2px]" />
+      </div>
+
       {/* Decorative background blobs to enhance the glass effect */}
       <div className="absolute top-1/4 left-1/4 w-[25rem] h-[25rem] bg-clay/15 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-marigold/15 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"></div>
@@ -770,27 +718,39 @@ function FAQ() {
 
 function Contact() {
   return (
-    <section id="contact" className="section-pad">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+    <section id="contact" className="section-pad relative overflow-hidden text-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/contact-bg.png" 
+          alt="Contact Background" 
+          fill 
+          className="object-cover"
+        />
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-ink/70" />
+      </div>
+
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start relative z-10">
         <div>
-          <p className="mb-3 text-sm font-bold uppercase text-clay">Booking and contact</p>
+          <p className="mb-3 text-sm font-bold uppercase text-marigold">Booking and contact</p>
           <h2 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
             Ready to feel supported by your routines?
           </h2>
-          <p className="mt-5 text-lg leading-8 text-ink/72">
+          <p className="mt-5 text-lg leading-8 text-white/80">
             Send a note or book a free 20-minute clarity call. You will leave with
             a next step, whether or not coaching is the right fit.
           </p>
           <div className="mt-8 space-y-4">
             <a
-              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-md bg-ink px-5 font-bold text-white transition hover:bg-moss"
+              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-md bg-white/10 backdrop-blur-md px-5 font-bold text-white transition hover:bg-marigold hover:text-ink"
               href="mailto:hello@lumawell.co"
             >
               hello@lumawell.co
               <Mail aria-hidden="true" size={20} />
             </a>
             <a
-              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-md border border-ink/12 px-5 font-bold text-ink transition hover:border-moss hover:text-moss"
+              className="focus-ring flex min-h-14 items-center justify-between gap-4 rounded-md border border-white/20 px-5 font-bold text-white transition hover:bg-white hover:text-ink"
               href="#programs"
             >
               Compare programs
@@ -798,7 +758,7 @@ function Contact() {
             </a>
           </div>
         </div>
-        <form className="rounded-md bg-white p-5 shadow-soft" action="mailto:hello@lumawell.co" method="post">
+        <form className="rounded-md bg-white p-5 shadow-soft text-ink" action="mailto:hello@lumawell.co" method="post">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-bold text-ink/78" htmlFor="contact-name">
