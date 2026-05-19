@@ -342,7 +342,7 @@ function Intro() {
           src="/nature-bg.png" 
           alt="Intro Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
@@ -379,7 +379,7 @@ function FeaturedEvent() {
           src="/nature-bg.png" 
           alt="Event Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFF8EF]/92 backdrop-blur-[2px]" />
       </div>
@@ -565,7 +565,7 @@ function About() {
           src="/coaches-bg.png" 
           alt="Wellness Coaches Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
@@ -631,7 +631,7 @@ function Programs() {
           src="/nature-bg.png" 
           alt="Programs Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
@@ -698,7 +698,7 @@ function Testimonials() {
           src="/wellness-bg.png" 
           alt="Client Results Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
@@ -759,7 +759,7 @@ function LeadMagnet() {
           src="/wellness-bg.png" 
           alt="Lead Magnet Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFF8EF]/92 backdrop-blur-[2px]" />
       </div>
@@ -818,7 +818,7 @@ function Resources() {
           src="/nature-bg.png" 
           alt="Resources Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
@@ -875,7 +875,7 @@ function FAQ() {
           src="/faq-bg.png" 
           alt="FAQ Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-[#FFFDF8]/92 backdrop-blur-[2px]" />
       </div>
@@ -923,7 +923,7 @@ function Contact() {
           src="/contact-bg.png" 
           alt="Contact Background" 
           fill 
-          className="object-cover blur-[8px] scale-105"
+          className="object-cover"
         />
         {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-[#FFFDF8]/90" />
