@@ -341,8 +341,8 @@ function Intro() {
     <section className="section-pad relative overflow-hidden bg-[#FFFDF8]">
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/nature-bg.png" 
-          alt="Intro Background" 
+          src="/our-vision-bg.png" 
+          alt="Our Vision Background" 
           fill 
           className="object-cover"
         />
@@ -378,8 +378,8 @@ function FeaturedEvent() {
     <section className="section-pad relative overflow-hidden bg-linen">
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/nature-bg.png" 
-          alt="Event Background" 
+          src="/featured-event-bg.png" 
+          alt="Featured Event Background" 
           fill 
           className="object-cover"
         />
@@ -564,8 +564,8 @@ function About() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/coaches-bg.png" 
-          alt="Wellness Coaches Background" 
+          src="/expert-guidance-bg.png" 
+          alt="Expert Guidance Background" 
           fill 
           className="object-cover"
         />
@@ -630,8 +630,8 @@ function Programs() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/nature-bg.png" 
-          alt="Programs Background" 
+          src="/programs-bg.png" 
+          alt="Our Programs Background" 
           fill 
           className="object-cover"
         />
@@ -697,8 +697,8 @@ function Testimonials() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/wellness-bg.png" 
-          alt="Client Results Background" 
+          src="/testimonials-bg.png" 
+          alt="Client Transformations Background" 
           fill 
           className="object-cover"
         />
@@ -758,8 +758,8 @@ function LeadMagnet() {
     <section className="relative px-4 py-16 text-black sm:px-6 lg:px-8 overflow-hidden bg-linen">
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/wellness-bg.png" 
-          alt="Lead Magnet Background" 
+          src="/community-bg.png" 
+          alt="Free Community Access Background" 
           fill 
           className="object-cover"
         />
@@ -817,8 +817,8 @@ function Resources() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/nature-bg.png" 
-          alt="Resources Background" 
+          src="/resources-bg.png" 
+          alt="Resource Center Background" 
           fill 
           className="object-cover"
         />
