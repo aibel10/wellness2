@@ -20,6 +20,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { MobileNav } from "./MobileNav";
 
 const navItems = [
   { label: "About", href: "/#about" },
@@ -250,28 +251,7 @@ function Header() {
             <CalendarCheck aria-hidden="true" size={18} />
             Book
           </a>
-          <details className="relative md:hidden">
-            <summary
-              aria-label="Open navigation menu"
-              className="focus-ring flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-md border border-white/25 bg-white/12 text-white [&::-webkit-details-marker]:hidden"
-            >
-              <Menu aria-hidden="true" size={21} />
-            </summary>
-            <nav
-              aria-label="Mobile navigation"
-              className="absolute right-0 top-14 grid w-56 gap-1 rounded-md bg-white p-2 text-ink shadow-soft"
-            >
-              {navItems.map((item) => (
-                <a
-                  className="focus-ring rounded-md px-3 py-3 text-sm font-semibold hover:bg-mist"
-                  href={item.href}
-                  key={item.href}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </details>
+          <MobileNav navItems={navItems} />
         </div>
       </div>
     </header>
@@ -280,8 +260,8 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="hero-image relative min-h-[92vh] pt-16 text-white">
-      <div className="mx-auto flex min-h-[calc(92vh-4rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
+    <section id="top" className="hero-image relative min-h-[80vh] pt-16 text-white">
+      <div className="mx-auto flex min-h-[calc(80vh-4rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="mb-5 inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/12 px-3 py-2 text-sm font-semibold uppercase text-white backdrop-blur-sm">
             <ShieldCheck aria-hidden="true" size={16} />
@@ -310,7 +290,7 @@ function Hero() {
               <ChevronRight aria-hidden="true" size={19} />
             </a>
           </div>
-          <div className="mt-10 grid max-w-2xl grid-cols-3 gap-3 text-sm text-white/82">
+          <div className="mt-10 grid max-w-2xl grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white/82">
             <div className="rounded-md border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
               <strong className="block text-2xl text-white">12+</strong>
               weeks of support
@@ -620,10 +600,10 @@ function Testimonials() {
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           {/* Explicit w-max and flex-nowrap fixes the marquee width issue */}
           <div className="flex w-full overflow-hidden [--gap:1.25rem] gap-5 group flex-nowrap">
-            {/* Added animate-[marquee_40s_linear_infinite] just in case tailwind.config wasn't picking it up properly */}
-            <div className="flex w-max min-w-full shrink-0 animate-[marquee_40s_linear_infinite] flex-nowrap items-stretch gap-5 group-hover:[animation-play-state:paused]">
+            {/* Using standard animate-marquee with custom variables */}
+            <div className="flex w-max min-w-full shrink-0 animate-marquee [--duration:40s] flex-nowrap items-stretch gap-5 group-hover:[animation-play-state:paused]">
               {testimonials.map((testimonial) => (
-                <figure className="w-[350px] shrink-0 rounded-2xl border border-white/50 bg-white/30 backdrop-blur-xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] flex flex-col transition-all hover:bg-white/40 hover:-translate-y-1" key={testimonial.name}>
+                <figure className="w-[290px] sm:w-[350px] shrink-0 rounded-2xl border border-white/50 bg-white/30 backdrop-blur-xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] flex flex-col transition-all hover:bg-white/40 hover:-translate-y-1" key={testimonial.name}>
                   <Quote className="mb-5 text-clay" aria-hidden="true" size={30} />
                   <blockquote className="text-lg leading-relaxed text-ink/80 flex-1 font-medium">“{testimonial.quote}”</blockquote>
                   <figcaption className="mt-6 border-t border-ink/10 pt-5">
@@ -633,9 +613,9 @@ function Testimonials() {
                 </figure>
               ))}
             </div>
-            <div className="flex w-max min-w-full shrink-0 animate-[marquee_40s_linear_infinite] flex-nowrap items-stretch gap-5 group-hover:[animation-play-state:paused]" aria-hidden="true">
+            <div className="flex w-max min-w-full shrink-0 animate-marquee [--duration:40s] flex-nowrap items-stretch gap-5 group-hover:[animation-play-state:paused]" aria-hidden="true">
               {testimonials.map((testimonial) => (
-                <figure className="w-[350px] shrink-0 rounded-2xl border border-white/50 bg-white/30 backdrop-blur-xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] flex flex-col transition-all hover:bg-white/40 hover:-translate-y-1" key={`copy-${testimonial.name}`}>
+                <figure className="w-[290px] sm:w-[350px] shrink-0 rounded-2xl border border-white/50 bg-white/30 backdrop-blur-xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] flex flex-col transition-all hover:bg-white/40 hover:-translate-y-1" key={`copy-${testimonial.name}`}>
                   <Quote className="mb-5 text-clay" aria-hidden="true" size={30} />
                   <blockquote className="text-lg leading-relaxed text-ink/80 flex-1 font-medium">“{testimonial.quote}”</blockquote>
                   <figcaption className="mt-6 border-t border-ink/10 pt-5">
@@ -691,7 +671,7 @@ function LeadMagnet() {
             type="email"
           />
           <button
-            className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ink px-5 font-bold text-white transition hover:bg-clay"
+            className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-marigold px-5 font-bold text-ink transition hover:bg-white"
             type="submit"
           >
             Get Guide
@@ -890,7 +870,7 @@ function Footer() {
               </h2>
             </a>
             <blockquote className="border-l-2 border-ink/20 pl-4 text-ink/70 italic leading-relaxed">
-              "Helping busy professionals achieve balance, energy, confidence, and sustainable wellness."
+              &quot;Helping busy professionals achieve balance, energy, confidence, and sustainable wellness.&quot;
             </blockquote>
           </div>
 

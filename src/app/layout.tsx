@@ -65,7 +65,7 @@ export default function RootLayout({
           href="https://wa.me/1234567890" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="fixed left-4 top-1/2 -translate-y-1/2 z-[100] flex items-center justify-center group"
+          className="fixed left-6 bottom-6 z-[100] flex items-center justify-center group"
           aria-label="Chat on WhatsApp"
         >
           {/* Tooltip */}
@@ -95,7 +95,7 @@ export default function RootLayout({
         {/* Floating Call Button */}
         <a 
           href="tel:+1234567890" 
-          className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] flex items-center justify-center group"
+          className="fixed right-6 bottom-6 z-[100] flex items-center justify-center group"
           aria-label="Call Us"
         >
           {/* Tooltip */}

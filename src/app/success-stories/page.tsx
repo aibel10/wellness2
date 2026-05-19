@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Leaf, CalendarCheck, Menu, Star, Quote, Mail, Phone, MapPin } from "lucide-react";
+import { MobileNav } from "../MobileNav";
 
 const navItems = [
   { label: "About", href: "/#about" },
@@ -81,15 +82,11 @@ export default function SuccessStoriesPage() {
                 {/* Image Side */}
                 <div className="w-full md:w-1/2">
                   <div className="relative aspect-square sm:aspect-square md:aspect-square lg:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl shadow-ink/5 border border-white/60 bg-white/30 backdrop-blur-md group">
-                    <div className="absolute inset-0 bg-mist flex flex-col items-center justify-center text-ink/60 text-sm font-medium text-center p-4">
-                      <span>Please place image as</span>
-                      <span className="bg-white px-2 py-1 rounded mt-2">public/results/{story.id}.jpg</span>
-                    </div>
                     <Image 
                       src={story.img} 
                       alt={`Client transformation ${story.id}`} 
                       fill 
-                      className="object-cover relative z-10 transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                       unoptimized
                     />
                   </div>
@@ -111,7 +108,7 @@ export default function SuccessStoriesPage() {
                   <div className="bg-white/40 backdrop-blur-xl border border-white/60 p-6 md:p-8 rounded-[1.5rem] relative shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] transition-all hover:bg-white/50 hover:shadow-[0_12px_40px_0_rgba(0,0,0,0.08)] hover:-translate-y-1">
                     <Quote className="absolute top-6 left-6 w-8 h-8 text-clay/30" />
                     <p className="text-ink/80 text-lg font-medium leading-relaxed italic relative z-10 pl-8">
-                      "{story.quote}"
+                      &quot;{story.quote}&quot;
                     </p>
                   </div>
                 </div>
@@ -172,28 +169,7 @@ function Header() {
             <CalendarCheck aria-hidden="true" size={18} />
             Book
           </a>
-          <details className="relative md:hidden">
-            <summary
-              aria-label="Open navigation menu"
-              className="focus-ring flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-md border border-white/25 bg-white/12 text-white [&::-webkit-details-marker]:hidden"
-            >
-              <Menu aria-hidden="true" size={21} />
-            </summary>
-            <nav
-              aria-label="Mobile navigation"
-              className="absolute right-0 top-14 grid w-56 gap-1 rounded-md bg-white p-2 text-ink shadow-soft"
-            >
-              {navItems.map((item) => (
-                <a
-                  className="focus-ring rounded-md px-3 py-3 text-sm font-semibold hover:bg-mist"
-                  href={item.href}
-                  key={item.href}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </details>
+          <MobileNav navItems={navItems} />
         </div>
       </div>
     </header>
@@ -215,7 +191,7 @@ function Footer() {
               </h2>
             </a>
             <blockquote className="border-l-2 border-ink/20 pl-4 text-ink/70 italic leading-relaxed">
-              "Helping busy professionals achieve balance, energy, confidence, and sustainable wellness."
+              &quot;Helping busy professionals achieve balance, energy, confidence, and sustainable wellness.&quot;
             </blockquote>
           </div>
 
