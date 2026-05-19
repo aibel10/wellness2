@@ -50,7 +50,7 @@ export function MobileNav({ navItems }: MobileNavProps) {
 
           {/* Sliding Drawer */}
           <div 
-            className="absolute right-0 top-0 bottom-0 z-20 w-[85%] max-w-sm border-l border-ink/10 h-full shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300 translate-x-0"
+            className="absolute right-0 top-0 bottom-0 z-20 w-[75%] max-w-xs border-l border-ink/10 h-full shadow-2xl p-5 flex flex-col justify-between transition-transform duration-300 translate-x-0"
             style={{ backgroundColor: "#FFF8EF", opacity: 1, zIndex: 20 }}
           >
             <div>

@@ -221,7 +221,9 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/30 text-white backdrop-blur-xl shadow-soft">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 text-white shadow-soft">
+      {/* Background blur layer - prevents establishing containing block on header */}
+      <div className="absolute inset-0 -z-10 bg-ink/30 backdrop-blur-xl" />
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a className="focus-ring flex items-center gap-2 rounded-md group" href="/" aria-label="LumaWell home">
           <span className="relative flex h-9 w-9 items-center justify-center rounded-md bg-marigold text-ink overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(233,180,76,0.6)]">
