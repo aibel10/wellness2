@@ -3,35 +3,37 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lumawell.example.com"),
+  metadataBase: new URL("https://mission444.com"),
   title: {
-    default: "LumaWell Wellness Coaching | Holistic Health Coach Website",
-    template: "%s | LumaWell Wellness Coaching",
+    default: "Asuhar B | Mission 444 Wellness World | Lifestyle Trainer",
+    template: "%s | Mission 444 Wellness World",
   },
   description:
-    "A strategic wellness coach website with services, testimonials, signature program details, booking, opt-in, FAQs, and SEO-friendly resources.",
+    "Professional website of Asuhar B, International Lifestyle Trainer and founder of Mission 444 Wellness World. Eat Right Food Awareness, weight loss, health transformation, wealth creation, and changing lives.",
   keywords: [
-    "wellness coach",
-    "holistic health coach",
-    "wellness coaching program",
-    "health coaching services",
-    "stress and energy coaching",
+    "Asuhar B",
+    "Mission 444 Wellness World",
+    "Eat Right Food Awareness",
+    "International Lifestyle Trainer",
+    "Wellness and Lifestyle Builder",
+    "Trivandrum Wellness Coach",
+    "Weight Loss Trainer Kerala",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "LumaWell Wellness Coaching",
+    title: "Asuhar B | Mission 444 Wellness World",
     description:
-      "Build calmer energy, steadier habits, and a body rhythm that feels like yours.",
-    url: "https://lumawell.example.com",
-    siteName: "LumaWell Wellness Coaching",
+      "Building Wellness. Creating Wealth. Changing Lives. Learn food awareness and transform your life with trainer Asuhar B.",
+    url: "https://mission444.com",
+    siteName: "Mission 444 Wellness World",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=82",
+        url: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=82",
         width: 1200,
         height: 630,
-        alt: "Calm wellness coaching and movement session",
+        alt: "Mission 444 Wellness World",
       },
     ],
     locale: "en_US",
@@ -39,11 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LumaWell Wellness Coaching",
+    title: "Asuhar B | Mission 444 Wellness World",
     description:
-      "Whole-person coaching for sustainable energy, nourishment, and routines.",
+      "Building Wellness. Creating Wealth. Changing Lives. Learn food awareness with trainer Asuhar B.",
     images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=82",
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=82",
     ],
   },
   robots: {
@@ -66,15 +68,15 @@ export default function RootLayout({
           {children}
         </SmoothScrollProvider>
         <a 
-          href="https://wa.me/1234567890" 
+          href="https://wa.me/919809745714?text=Hi%20Asuhar%20B,%20I'm%20interested%20in%20joining%20the%20Mission%20444%20Wellness%20Community" 
           target="_blank" 
           rel="noopener noreferrer"
           className="fixed left-6 bottom-6 z-[100] flex items-center justify-center group"
           aria-label="Chat on WhatsApp"
         >
           {/* Tooltip */}
-          <span className="absolute left-full ml-4 whitespace-nowrap bg-white text-ink text-sm md:text-base font-medium px-5 py-2.5 rounded-full shadow-md border border-ink/5 opacity-0 -translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-            Chat with us!
+          <span className="absolute left-full ml-4 whitespace-nowrap bg-[#101D35] text-white text-sm md:text-base font-medium px-5 py-2.5 rounded-full shadow-md border border-white/10 opacity-0 -translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            Chat with Asuhar B!
           </span>
           <div className="relative flex items-center justify-center">
             {/* Pulse rings */}
@@ -98,22 +100,22 @@ export default function RootLayout({
 
         {/* Floating Call Button */}
         <a 
-          href="tel:+1234567890" 
+          href="tel:+919809745714" 
           className="fixed right-6 bottom-6 z-[100] flex items-center justify-center group"
-          aria-label="Call Us"
+          aria-label="Call Asuhar B"
         >
           {/* Tooltip */}
-          <span className="absolute right-full mr-4 whitespace-nowrap bg-white text-ink text-sm md:text-base font-medium px-5 py-2.5 rounded-full shadow-md border border-ink/5 opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-            Call us now!
+          <span className="absolute right-full mr-4 whitespace-nowrap bg-[#101D35] text-white text-sm md:text-base font-medium px-5 py-2.5 rounded-full shadow-md border border-white/10 opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            Call +91 9809745714
           </span>
           <div className="relative flex items-center justify-center">
             {/* Pulse rings */}
-            <span className="absolute inset-0 rounded-full bg-[#007AFF] animate-ping opacity-30" />
-            <span className="absolute inset-0 rounded-full bg-[#007AFF] animate-ping opacity-20 [animation-delay:300ms]" />
-            <span className="absolute inset-0 rounded-full bg-[#007AFF] animate-ping opacity-10 [animation-delay:600ms]" />
+            <span className="absolute inset-0 rounded-full bg-[#FF6B00] animate-ping opacity-30" />
+            <span className="absolute inset-0 rounded-full bg-[#FF6B00] animate-ping opacity-20 [animation-delay:300ms]" />
+            <span className="absolute inset-0 rounded-full bg-[#FF6B00] animate-ping opacity-10 [animation-delay:600ms]" />
 
             {/* Main Button */}
-            <div className="relative bg-[#007AFF] text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_8px_30px_rgba(0,122,255,0.5)] flex items-center justify-center">
+            <div className="relative bg-[#FF6B00] text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_8px_30px_rgba(255,107,0,0.5)] flex items-center justify-center">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 24 24" 
