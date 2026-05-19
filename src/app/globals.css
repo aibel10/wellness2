@@ -6,48 +6,6 @@
   color-scheme: light;
   --page: #FFFDF8;
   --ink: #17211D;
-  --bg-page: #FFFDF8;
-  --bg-linen: #FFF8EF;
-  --bg-mist: #F4F7F1;
-  --text-black: #000000;
-  --text-slate: #475569;
-  
-  --border-theme: rgba(0, 0, 0, 0.1);
-  --border-theme-hover: rgba(0, 0, 0, 0.2);
-  --bg-card: rgba(244, 247, 241, 0.65);
-  --bg-card-hover: rgba(244, 247, 241, 0.85);
-  --bg-button: rgba(0, 0, 0, 0.05);
-  --bg-button-hover: rgba(0, 0, 0, 0.1);
-  --bg-header: rgba(255, 255, 255, 0.8);
-  --bg-footer: #FFF8EF;
-  --overlay-bg: rgba(255, 253, 248, 0.92);
-  --overlay-bg-alt: rgba(255, 248, 239, 0.92);
-  --shadow-color: rgba(23, 33, 29, 0.08);
-  --hero-gradient: linear-gradient(90deg, rgba(255, 253, 248, 0.95), rgba(255, 253, 248, 0.75), rgba(255, 253, 248, 0.4));
-}
-
-.dark {
-  color-scheme: dark;
-  --page: #060B15;
-  --ink: #FFFFFF;
-  --bg-page: #060B15;
-  --bg-linen: #0B1224;
-  --bg-mist: #101D35;
-  --text-black: #FFFFFF;
-  --text-slate: #CBD5E1;
-  
-  --border-theme: rgba(255, 255, 255, 0.1);
-  --border-theme-hover: rgba(255, 255, 255, 0.2);
-  --bg-card: rgba(16, 29, 53, 0.65);
-  --bg-card-hover: rgba(16, 29, 53, 0.85);
-  --bg-button: rgba(255, 255, 255, 0.05);
-  --bg-button-hover: rgba(255, 255, 255, 0.1);
-  --bg-header: rgba(6, 11, 21, 0.8);
-  --bg-footer: #060B15;
-  --overlay-bg: rgba(6, 11, 21, 0.92);
-  --overlay-bg-alt: rgba(11, 18, 36, 0.92);
-  --shadow-color: rgba(0, 0, 0, 0.5);
-  --hero-gradient: linear-gradient(90deg, rgba(6, 11, 21, 0.95), rgba(6, 11, 21, 0.75), rgba(6, 11, 21, 0.4));
 }
 
 * {
@@ -114,11 +72,22 @@ img {
 }
 
 .hero-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-image:
     linear-gradient(90deg, rgba(255, 253, 248, 0.95), rgba(255, 253, 248, 0.75), rgba(255, 253, 248, 0.4)),
     url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1800&q=82");
   background-position: center;
   background-size: cover;
+  filter: blur(8px);
+  transform: scale(1.05);
 }
 
 .section-pad {
